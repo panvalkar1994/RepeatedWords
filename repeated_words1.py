@@ -12,11 +12,11 @@ word_freq = {}
 def word_freq_builder(raw_string, word_freq):
     words = raw_string.split()
     for word in words:
-        # ignoring sentence endings like '.', '!', '?' are not words
-        if word == '.' or word == '!' or word =='?':
+        # ignoring sentence endings like '.', '!', '?' which are not words
+        if word == '.' or word == '!' or word =='?' or word == ',':
             continue
         # assuming words 'round.' and 'round .' to be same
-        if word[-1] == '.':
+        if word[-1] in ['.','!',',','?']:
             word = word[:len(word)-1]
         if word not in word_freq.keys():
             word_freq[word] = 1
