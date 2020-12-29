@@ -25,7 +25,7 @@ def word_freq_builder(raw_string, word_freq):
 
 
 # Reading though the input file and building frequncy map
-for line in file:
+for line in file.readlines():
     # rememove white space in front and back of the line
     raw_string = line.rstrip()
     word_freq_builder(raw_string, word_freq)
