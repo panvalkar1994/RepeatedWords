@@ -38,7 +38,7 @@ num_repeat_words = 0
 for word in word_freq:
     if word_freq[word]>1:
         num_repeat_words += 1
-        print(word, str(word_freq[word]))
+        # print(word, str(word_freq[word]))
 
 # Result
 print("Number of repeated words is "+ str(num_repeat_words))
