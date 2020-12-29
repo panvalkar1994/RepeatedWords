@@ -30,6 +30,9 @@ for line in file:
     raw_string = line.rstrip()
     word_freq_builder(raw_string, word_freq)
 
+# Close file
+file.close()
+
 # repeated words
 num_repeat_words = 0
 for word in word_freq:
